@@ -155,7 +155,29 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Animations */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #2075A7;
+    color: #E8F1F7;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #backToTop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;

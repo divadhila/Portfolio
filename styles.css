@@ -235,7 +235,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Back to Top Button */
+
 #backToTop {
     position: fixed;
     bottom: 30px;
@@ -259,14 +259,14 @@ footer {
     visibility: visible;
   }
   
-  /* Navbar Active Link */
+
   nav ul li a.active {
     color: #856a2c;
     font-weight: bold;
   }
   
 
-/* Animations */
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;

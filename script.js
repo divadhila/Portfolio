@@ -16,7 +16,7 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Navbar Active Highlight (simpler)
+// Navbar Active Highlight
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
