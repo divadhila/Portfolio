@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-    --blue: #2075A7;
-    --light-blue: #E8F1F7;
-    --navy: #131C25;
-    --beige: #E8DFC4;
-    --gold: #856A2C;
-    --text-dark: #131C25;
-    --text-light: #ffffff;
+    --primary-dark: #0e1f3b;   /* Deep Brown - heading/nav */
+    --primary-light: #fdf3d6;  /* Soft White - background */
+    --secondary: #cfe1f4;      /* Pastel Blue - sections/cards */
+    --accent:  #f5b195;         /* Neon Lime - highlights */
+    --extra-accent: #4d7cbf;   /* Terracotta - optional warmth */
+
+    --text-dark: var(--primary-dark);
+    --text-light: #fff9ef;
 }
 
 html {
@@ -18,7 +19,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--light-blue);
+    background-color: var(--primary-light);
     color: var(--text-dark);
 }
 
@@ -26,7 +27,7 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    background: linear-gradient(90deg, var(--blue), var(--navy));
+    background: linear-gradient(90deg, var(--primary-dark), var(--extra-accent));
     padding: 15px;
     text-align: center;
     z-index: 1000;
@@ -34,7 +35,7 @@ nav {
 }
 
 nav a {
-    color: var(--light-blue);
+    color: var(--primary-light);
     text-decoration: none;
     margin: 0 15px;
     font-weight: 600;
@@ -42,15 +43,15 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--gold);
-    border-bottom: 2px solid var(--gold);
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
 }
 
 nav a.active {
-    color: var(--gold);
+    color: var(--secondary);
     font-weight: bold;
-  }
-  
+}
+
 /* Hero */
 .hero {
     display: flex;
@@ -58,7 +59,7 @@ nav a.active {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(90deg, var(--blue), var(--navy));
+    background: linear-gradient(90deg, var(--primary-dark), var(--extra-accent));
     color: var(--text-light);
     padding: 0 10%;
 }
@@ -73,20 +74,20 @@ nav a.active {
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 3px;
-    color: var(--beige);
+    color: var(--accent);
 }
 
 .hero h2 {
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 20px;
-    color: var(--light-blue);
+    color: var(--primary-light);
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 500px;
-    color: var(--beige);
+    color: var(--secondary);
 }
 
 .hero-image {
@@ -101,20 +102,20 @@ nav a.active {
     max-width: 350px;
     height: auto;
     border-radius: 50%;
-    border: 5px solid var(--beige);
+    border: 5px solid var(--accent);
 }
 
 /* About */
 .about {
     text-align: center;
     padding: 80px 20px;
-    background: var(--beige);
-    color: var(--navy);
+    background: var(--primary-light);
+    color: var(--primary-dark);
 }
 
 .about h2 {
     margin-bottom: 20px;
-    color: var(--blue);
+    color: var(--extra-accent);
 }
 
 .about p {
@@ -127,7 +128,7 @@ nav a.active {
 .cv-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--blue);
+    background-color: var(--accent);
     color: var(--text-light);
     text-decoration: none;
     border-radius: 30px;
@@ -137,7 +138,7 @@ nav a.active {
 }
 
 .cv-button:hover {
-    background-color: var(--gold);
+    background-color: var(--extra-accent);
     transform: scale(1.05);
 }
 
@@ -145,12 +146,12 @@ nav a.active {
 .projects {
     padding: 60px 20px;
     text-align: center;
-    background: var(--light-blue);
-    color: var(--navy);
+    background: var(--secondary);
+    color: var(--primary-dark);
 }
 
 .projects h2 {
-    color: var(--blue);
+    color: var(--primary-dark);
 }
 
 .project-grid {
@@ -162,11 +163,11 @@ nav a.active {
 }
 
 .project-card {
-    background: var(--beige);
+    background: var(--primary-light);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    color: var(--navy);
+    color: var(--primary-dark);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -179,8 +180,8 @@ nav a.active {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 18px;
-    background-color: var(--blue);
-    color: var(--text-light);
+    background-color: var(--accent);
+    color: var(--primary-light);
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
@@ -188,7 +189,7 @@ nav a.active {
 }
 
 .project-button:hover {
-    background-color: var(--gold);
+    background-color: var(--extra-accent);
     transform: scale(1.05);
 }
 
@@ -196,12 +197,12 @@ nav a.active {
 .contact {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(90deg, var(--blue), var(--navy));
+    background: linear-gradient(90deg, var(--primary-dark), var(--extra-accent));
     color: var(--text-light);
 }
 
 .contact h2 {
-    color: var(--beige);
+    color: var(--accent);
 }
 
 .contact-icons {
@@ -217,31 +218,30 @@ nav a.active {
     height: 60px;
     transition: transform 0.3s ease, background 0.3s ease;
     border-radius: 50%;
-    background: var(--beige);
+    background: var(--primary-light);
     padding: 8px;
 }
 
 .contact-icons img:hover {
     transform: scale(1.1);
-    background: var(--gold);
+    background: var(--extra-accent);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 15px;
-    background: linear-gradient(90deg, var(--blue), var(--navy));
-    color: var(--light-blue);
+    background: linear-gradient(90deg, var(--primary-dark), var(--extra-accent));
+    color: var(--primary-light);
     font-size: 0.9rem;
 }
-
 
 #backToTop {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: #2075A7;
-    color: #E8F1F7;
+    background: var(--accent);
+    color: var(--primary-light);
     border: none;
     border-radius: 50%;
     width: 45px;
@@ -252,20 +252,17 @@ footer {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-  }
+}
   
-  #backToTop.show {
+#backToTop.show {
     opacity: 1;
     visibility: visible;
-  }
-  
+}
 
-  nav ul li a.active {
-    color: #856a2c;
+nav ul li a.active {
+    color: var(--extra-accent);
     font-weight: bold;
-  }
-  
-
+}
 
 .fade-in {
     opacity: 0;
